@@ -1,20 +1,21 @@
-#ifndef REPTILE_H
-#define REPTILE_H
-#include'Animal.h'
-
+#ifndef VISITOR_H
+#define VISITOR_H
 #include <string>
 #include<iostream>
 using namespace std;
 
-class Reptile : public Animal {
+class Visitor {
 private:
-	bool isVenomous;
+	string visitorName;
+	int ticketsBought;
 public:
-	Reptile(string name, int age, bool isVenomous, bool isHungry);
-	Reptile();
-	~Reptile();
-	bool getIsVenomous();
-	void setIsVenomous(bool isVenomous);
-
+	Visitor(string visitorName, int ticketsBought);
+	Visitor();
+	void displayInfo();
+	~Visitor();
+	string getVisitorName();
+	int getTicketsBought();
+	void setVisitorName(string visitorName);
+	void setTicketsBought(int ticketsBought);
 };
-#endif 
+#endif
